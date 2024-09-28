@@ -1,3 +1,5 @@
+import 'package:bookly/core/helpers/extensions.dart';
+import 'package:bookly/core/routing/routes.dart';
 import 'package:bookly/features/splash/ui/screens/widgets/sliding_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +20,7 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
     animationController = AnimationController(vsync: this, duration: const Duration(seconds: 1));
     slidingAnimation = Tween<Offset>(begin: const Offset(0,15), end: Offset.zero).animate(animationController);
     animationController.forward();
+    tohome();
   }
   @override
   void dispose() {
@@ -34,6 +37,12 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
         SlidingWidget(slidingAnimation: slidingAnimation)
       ],
     );
+  }
+  void tohome() {
+    Future.delayed(Duration(seconds: 5),() async {
+      WidgetsFlutterBinding.ensureInitialized();
+      context.pushReplacementNamed(Routes.homeScreen);
+    });
   }
 }
 

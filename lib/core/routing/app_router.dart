@@ -1,3 +1,4 @@
+import 'package:bookly/features/home/ui/screens/home_screen.dart';
 import 'package:bookly/features/splash/ui/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'routes.dart';
@@ -12,10 +13,10 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const SplashScreen(),
         );
-      // case Routes.loginScreen:
-      //   return MaterialPageRoute(
-      //     builder: (_) => const Placeholder(),
-      //   );
+      case Routes.homeScreen:
+        return MaterialPageRoute(
+          builder: (_) => const HomeScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
