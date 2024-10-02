@@ -3,6 +3,7 @@ import 'package:bookly/core/routing/routes.dart';
 import 'package:bookly/core/theming/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BooklyApp extends StatelessWidget {
   final AppRouter appRouter;
@@ -17,9 +18,10 @@ class BooklyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark().copyWith(
-          scaffoldBackgroundColor: ColorsManager.kPrimaryColor
+          scaffoldBackgroundColor: ColorsManager.kPrimaryColor,
+          textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
         ),
-        initialRoute: Routes.splashScreen,
+        initialRoute: Routes.splashScreen1,
         onGenerateRoute: appRouter.generateRoute,
       )
     );

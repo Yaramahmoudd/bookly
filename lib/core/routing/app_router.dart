@@ -1,5 +1,5 @@
 import 'package:bookly/features/home/ui/screens/home_screen.dart';
-import 'package:bookly/features/splash/ui/screens/splash_screen.dart';
+import 'package:bookly/features/splash/ui/screens/splash_screen1.dart';
 import 'package:flutter/material.dart';
 import 'routes.dart';
 
@@ -9,9 +9,9 @@ class AppRouter {
     final arguments = settings.arguments;
 
     switch (settings.name) {
-      case Routes.splashScreen:
+      case Routes.splashScreen1:
         return MaterialPageRoute(
-          builder: (_) => const SplashScreen(),
+          builder: (_) => const SplashScreen1(),
         );
       case Routes.homeScreen:
         return MaterialPageRoute(
