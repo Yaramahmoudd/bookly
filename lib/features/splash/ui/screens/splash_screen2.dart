@@ -4,14 +4,14 @@ import 'package:bookly/features/splash/ui/screens/widgets/sliding_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-class SplashViewBody extends StatefulWidget {
-  const SplashViewBody({super.key});
+class SplashScreen2 extends StatefulWidget {
+  const SplashScreen2({super.key});
 
   @override
-  State<SplashViewBody> createState() => _SplashViewBodyState();
+  State<SplashScreen2> createState() => _SplashScreen2State();
 }
 
-class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProviderStateMixin {
+class _SplashScreen2State extends State<SplashScreen2> with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> slidingAnimation;
   @override
@@ -39,7 +39,7 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
     );
   }
   void tohome() {
-    Future.delayed(Duration(seconds: 5),() async {
+    Future.delayed(const Duration(seconds: 3),() async {
       WidgetsFlutterBinding.ensureInitialized();
       context.pushReplacementNamed(Routes.homeScreen);
     });
