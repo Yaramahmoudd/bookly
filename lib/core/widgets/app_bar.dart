@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppBarItem extends StatelessWidget {
-  const AppBarItem({super.key});
+  final IconData barIcon;
+  const AppBarItem({super.key, required this.barIcon});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class AppBarItem extends StatelessWidget {
             Image.asset('assets/images/Logo.png',height: 40, width: 80,),
             IconButton(onPressed:() {
               
-            }, icon: const Icon(Icons.search, size: 25,))
+            }, icon:  Icon(barIcon, size: 25,))
         ],
       ),
     );

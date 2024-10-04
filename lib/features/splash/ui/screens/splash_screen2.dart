@@ -41,7 +41,7 @@ class _SplashScreen2State extends State<SplashScreen2> with SingleTickerProvider
   void tohome() {
     Future.delayed(const Duration(seconds: 3),() async {
       WidgetsFlutterBinding.ensureInitialized();
-      context.pushReplacementNamed(Routes.homeScreen);
+      context.pushReplacementNamed(Routes.onboardingScreen);
     });
   }
 }

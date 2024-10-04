@@ -10,12 +10,16 @@ class AppTextButton extends StatelessWidget {
   final double? verticalPadding;
   final double? buttonWidth;
   final double? buttonHeight;
+  final Color? borderColor;
+  final double? borderWidth;
   final String buttonText;
   final TextStyle textStyle;
   final VoidCallback onPressed;
   const AppTextButton({
     super.key,
     this.borderRadius,
+    this.borderColor, // Include borderColor in constructor
+    this.borderWidth,
     this.backgroundColor,
     this.horizontalPadding,
     this.verticalPadding,
@@ -33,6 +37,10 @@ class AppTextButton extends StatelessWidget {
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius ?? 16.0),
+            side: BorderSide(
+              color: borderColor ?? Colors.transparent, // Use borderColor
+              width: borderWidth ?? 1.0, // Use borderWidth
+            ),
           ),
         ),
         backgroundColor: MaterialStatePropertyAll(
