@@ -1,4 +1,4 @@
-import 'package:bookly/features/home/ui/widgets/custom_list_view_item.dart';
+import 'package:bookly/features/home/ui/widgets/books_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

@@ -40,10 +40,22 @@ static TextStyle font20WhiteRegular = TextStyle(
     fontWeight: FontWeightHelper.medium,
     color: Colors.white,
   );
+  
+  static TextStyle font24WhiteBold = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.white,
+  );
 
   static TextStyle font14WhiteRegular = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
     color: ColorsManager.gry,
+  );
+
+  static TextStyle font15BlackMedium = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: Colors.black,
   );
 }

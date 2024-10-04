@@ -18,7 +18,7 @@ class HomeScreenBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const AppBarItem(),
+              const AppBarItem(barIcon: Icons.search,),
               const BooksListView(),
               Padding(
                 padding: const EdgeInsets.only(
